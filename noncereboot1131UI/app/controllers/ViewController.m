@@ -27,10 +27,6 @@ mach_port_t tfp0;
     // Do any additional setup after loading the view, typically from a nib.
     multi_path_go();
     start(tfp0);
-    unlocknvram();
-    NSString *currentGenerator = [NSString stringWithUTF8String:getgen()];
-    _generatorLabel.text = [currentGenerator length] < 2 ? @"-unavailable-" : currentGenerator;
-    locknvram();
 }
 
 
