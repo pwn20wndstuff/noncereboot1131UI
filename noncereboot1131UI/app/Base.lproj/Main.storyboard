@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your generator here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nKB-dg-PSd">
+                                <rect key="frame" x="16" y="318.5" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="generatorInputActionTriggered:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="AtE-37-f2V"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="noncereboot1131" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBD-zi-EaY">
+                                <rect key="frame" x="58.5" y="72" width="259" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="for iOS 11.0 - 11.3.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qK3-dR-3SJ">
+                                <rect key="frame" x="116.5" y="122" width="143" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by Pwn20wnd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyu-zN-jQY">
+                                <rect key="frame" x="133.5" y="151" width="109" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanks to CoolStar, stek29 &amp; Ian Beer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsd-1D-wSe">
+                                <rect key="frame" x="16" y="626.5" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Generator: 0xfeedfacecafebeef" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IwY-5V-xhN">
+                                <rect key="frame" x="16" y="268.5" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qyu-zN-jQY" firstAttribute="centerX" secondItem="IwY-5V-xhN" secondAttribute="centerX" id="9Vn-hO-MAS"/>
+                            <constraint firstItem="qK3-dR-3SJ" firstAttribute="centerX" secondItem="qyu-zN-jQY" secondAttribute="centerX" id="A4t-81-Sgg"/>
+                            <constraint firstAttribute="bottom" secondItem="Lsd-1D-wSe" secondAttribute="bottom" constant="20" symbolic="YES" id="AUJ-dC-N3G"/>
+                            <constraint firstItem="Lsd-1D-wSe" firstAttribute="leading" secondItem="nKB-dg-PSd" secondAttribute="leading" id="DQJ-bp-ug6"/>
+                            <constraint firstItem="IwY-5V-xhN" firstAttribute="leading" secondItem="nKB-dg-PSd" secondAttribute="leading" id="TYA-o7-rIy"/>
+                            <constraint firstItem="nKB-dg-PSd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Z8G-V0-KKp"/>
+                            <constraint firstItem="nKB-dg-PSd" firstAttribute="top" secondItem="IwY-5V-xhN" secondAttribute="bottom" constant="29" id="Zdp-HF-gEa"/>
+                            <constraint firstItem="Lsd-1D-wSe" firstAttribute="trailing" secondItem="nKB-dg-PSd" secondAttribute="trailing" id="bLg-Yk-Ygx"/>
+                            <constraint firstItem="IwY-5V-xhN" firstAttribute="trailing" secondItem="nKB-dg-PSd" secondAttribute="trailing" id="eSC-5N-YZA"/>
+                            <constraint firstItem="nKB-dg-PSd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hwQ-3x-nvT"/>
+                            <constraint firstItem="OBD-zi-EaY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="52" id="j69-l1-QTg"/>
+                            <constraint firstItem="nKB-dg-PSd" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="mli-Hr-mUv"/>
+                            <constraint firstItem="OBD-zi-EaY" firstAttribute="centerX" secondItem="qK3-dR-3SJ" secondAttribute="centerX" id="skJ-G5-QM8"/>
+                            <constraint firstItem="qyu-zN-jQY" firstAttribute="top" secondItem="qK3-dR-3SJ" secondAttribute="bottom" constant="8" symbolic="YES" id="wld-wr-D1L"/>
+                            <constraint firstItem="qK3-dR-3SJ" firstAttribute="top" secondItem="OBD-zi-EaY" secondAttribute="bottom" constant="8" symbolic="YES" id="zVn-2z-nvq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="generatorInput" destination="nKB-dg-PSd" id="Ucp-ND-kjC"/>
+                        <outlet property="generatorLabel" destination="IwY-5V-xhN" id="SZy-ap-k2e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter your generator here" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="1Gq-dS-Ks1">
+                    <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </objects>
+            <point key="canvasLocation" x="135" y="133.09859154929578"/>
+        </scene>
+    </scenes>
+</document>
