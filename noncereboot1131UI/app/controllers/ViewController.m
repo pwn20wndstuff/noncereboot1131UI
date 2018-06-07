@@ -25,7 +25,10 @@ mach_port_t tfp0;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    multi_path_go();
+    kern_return_t ret = multi_path_go();
+    if (ret != KERN_SUCCESS) {
+        exit(-1);
+    }
     start(tfp0);
 }
 
