@@ -57,8 +57,6 @@
 		21A3654220C956D70086A0C0 /* sploit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sploit.c; sourceTree = "<group>"; };
 		21A3654320C956D70086A0C0 /* sploit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sploit.h; sourceTree = "<group>"; };
 		21A3654420C956D70086A0C0 /* offsets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = offsets.m; sourceTree = "<group>"; };
-		21A3654920C956EE0086A0C0 /* codesign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = codesign.h; sourceTree = "<group>"; };
-		21A3654A20C956EE0086A0C0 /* xpc_minimal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xpc_minimal.h; sourceTree = "<group>"; };
 		21A3654B20C956EE0086A0C0 /* IOKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOKit.h; sourceTree = "<group>"; };
 		21A3654D20C9578A0086A0C0 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IOKit.framework; sourceTree = "<group>"; };
 		21A3654F20C958290086A0C0 /* noncereboot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = noncereboot.h; sourceTree = "<group>"; };
@@ -178,8 +176,6 @@
 		21A3654820C956EE0086A0C0 /* headers */ = {
 			isa = PBXGroup;
 			children = (
-				21A3654920C956EE0086A0C0 /* codesign.h */,
-				21A3654A20C956EE0086A0C0 /* xpc_minimal.h */,
 				21A3654B20C956EE0086A0C0 /* IOKit.h */,
 			);
 			path = headers;
