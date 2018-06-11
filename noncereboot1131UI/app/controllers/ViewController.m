@@ -97,4 +97,44 @@ mach_port_t tfp0;
     }
 }
 
+void openUser(NSString *name) {
+    UIApplication *application = [UIApplication sharedApplication];
+    NSString *str = [NSString stringWithFormat:@"%@", _urlForUsername(name)];
+    NSURL *URL = [NSURL URLWithString:str];
+    [application openURL:URL options:@{} completionHandler:^(BOOL success) {
+        if (success != YES) {
+        }
+    }];
+}
+
+NSString *_urlForUsername(NSString *user) {
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"aphelion://"]]) {
+        return [@"aphelion://profile/" stringByAppendingString:user];
+    } else if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tweetbot://"]]) {
+        return [@"tweetbot:///user_profile/" stringByAppendingString:user];
+    } else if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"twitterrific://"]]) {
+        return [@"twitterrific:///profile?screen_name=" stringByAppendingString:user];
+    } else if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tweetings://"]]) {
+        return [@"tweetings:///user?screen_name=" stringByAppendingString:user];
+    } else if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"twitter://"]]) {
+        return [@"twitter://user?screen_name=" stringByAppendingString:user];
+    } else {
+        return [@"https://mobile.twitter.com/" stringByAppendingString:user];
+    }
+    return nil;
+}
+
+- (IBAction)tappedOnPwn20wnd:(id)sender {
+    openUser(@"Pwn20wnd");
+}
+- (IBAction)tappedOnCoolStar:(id)sender {
+    openUser(@"coolstarorg");
+}
+- (IBAction)tappedOnStek29:(id)sender {
+    openUser(@"stek29");
+}
+- (IBAction)tappedOnIanBeer:(id)sender {
+    openUser(@"i41nbeer");
+}
+
 @end
