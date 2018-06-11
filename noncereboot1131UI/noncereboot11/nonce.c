@@ -7,6 +7,7 @@
 #include <mach/mach.h>
 #include "IOKit.h"
 #include <CoreFoundation/CoreFoundation.h>
+#include "unlocknvram.h"
 
 #define kIONVRAMDeletePropertyKey   "IONVRAM-DELETE-PROPERTY"
 #define kIONVRAMForceSyncNowPropertyKey "IONVRAM-FORCESYNCNOW-PROPERTY"
@@ -110,4 +111,49 @@ char* getgen(void) {
 
 int delgen(void) {
     return makenapply(kIONVRAMDeletePropertyKey, nonceKey);
+}
+
+bool dump_apticket(const char *to)
+{
+    bool ret = false;
+    const char *from = "/System/Library/Caches/apticket.der";
+    struct stat s;
+    if(stat(from, &s) != 0)
+    {
+        ERROR("stat failed: %s", strerror(errno));
+    }
+    else
+    {
+        FILE *in  = fopen(from, "rb");
+        if(in == NULL)
+        {
+            ERROR("failed to open src: %s", strerror(errno));
+        }
+        else
+        {
+            FILE *out = fopen(to, "wb");
+            if(out == NULL)
+            {
+                ERROR("failed to open dst: %s", strerror(errno));
+            }
+            else
+            {
+                char *buf = malloc(s.st_size);
+                if(buf == NULL)
+                {
+                    ERROR("failed to alloc buf: %s", strerror(errno));
+                }
+                else
+                {
+                    fread(buf, s.st_size, 1, in);
+                    fwrite(buf, s.st_size, 1, out);
+                    free(buf);
+                    ret = true;
+                }
+                fclose(out);
+            }
+            fclose(in);
+        }
+    }
+    return ret;
 }

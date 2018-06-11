@@ -1,5 +1,7 @@
 #pragma once
 
+#include <stdbool.h>
+
 #define RAWLOG(fmt, args...)\
 fprintf(stderr, fmt, ##args);
 
@@ -15,4 +17,4 @@ RAWLOG("[ERR] " fmt "\n", ##args);
 int setgen(const char*);
 char* getgen(void);
 int delgen(void);
-
+bool dump_apticket(const char *to);

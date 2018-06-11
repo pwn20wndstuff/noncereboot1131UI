@@ -79,5 +79,22 @@ mach_port_t tfp0;
         locknvram();
     }
 }
+- (IBAction)tappedOnDumpApticket:(id)sender {
+    bool ret = dump_apticket([[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"apticket.der"].UTF8String);
+    if(ret)
+    {
+        UIAlertController *AlertController = [UIAlertController alertControllerWithTitle:@"Success"                                                   message:@"Dumped APTicket" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *OK = [UIAlertAction actionWithTitle:@"OK"                                     style:UIAlertActionStyleDefault handler:nil];
+        [AlertController addAction:OK];
+        [self presentViewController:AlertController animated:YES completion:nil];
+    }
+    else
+    {
+        UIAlertController *AlertController = [UIAlertController alertControllerWithTitle:@"Error"                                                   message:@"Failed to dump APTicket" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *OK = [UIAlertAction actionWithTitle:@"OK"                                     style:UIAlertActionStyleDefault handler:nil];
+        [AlertController addAction:OK];
+        [self presentViewController:AlertController animated:YES completion:nil];
+    }
+}
 
 @end

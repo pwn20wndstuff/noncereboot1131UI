@@ -66,7 +66,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AKJ-Gj-CSU">
-                                <rect key="frame" x="76" y="432" width="222.5" height="31"/>
+                                <rect key="frame" x="76" y="494.5" width="222.5" height="31"/>
                                 <subviews>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OrX-I8-94W">
                                         <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
@@ -80,7 +80,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tho-qC-0rb">
-                                <rect key="frame" x="86" y="471" width="203.5" height="31"/>
+                                <rect key="frame" x="86" y="533.5" width="203.5" height="31"/>
                                 <subviews>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UHX-H1-tjz">
                                         <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
@@ -93,6 +93,14 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrP-J4-Uv0">
+                                <rect key="frame" x="90" y="419.5" width="195" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="dump the apticket"/>
+                                <connections>
+                                    <action selector="tappedOnDumpApticket:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VpH-CR-E5B"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -112,10 +120,12 @@
                             <constraint firstItem="IwY-5V-xhN" firstAttribute="trailing" secondItem="nKB-dg-PSd" secondAttribute="trailing" id="eSC-5N-YZA"/>
                             <constraint firstItem="nKB-dg-PSd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hwQ-3x-nvT"/>
                             <constraint firstItem="OBD-zi-EaY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="52" id="j69-l1-QTg"/>
+                            <constraint firstItem="yrP-J4-Uv0" firstAttribute="centerX" secondItem="Fz3-2H-JAh" secondAttribute="centerX" id="jFq-ls-Djv"/>
+                            <constraint firstItem="yrP-J4-Uv0" firstAttribute="top" secondItem="Fz3-2H-JAh" secondAttribute="bottom" constant="7" id="mbm-Os-A8L"/>
                             <constraint firstItem="nKB-dg-PSd" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="mli-Hr-mUv"/>
                             <constraint firstItem="OBD-zi-EaY" firstAttribute="centerX" secondItem="qK3-dR-3SJ" secondAttribute="centerX" id="skJ-G5-QM8"/>
                             <constraint firstItem="qyu-zN-jQY" firstAttribute="top" secondItem="qK3-dR-3SJ" secondAttribute="bottom" constant="8" symbolic="YES" id="wld-wr-D1L"/>
-                            <constraint firstItem="AKJ-Gj-CSU" firstAttribute="top" secondItem="Fz3-2H-JAh" secondAttribute="bottom" constant="19.5" id="xNU-sz-BZP"/>
+                            <constraint firstItem="AKJ-Gj-CSU" firstAttribute="top" secondItem="Fz3-2H-JAh" secondAttribute="bottom" constant="82" id="xNU-sz-BZP"/>
                             <constraint firstItem="qK3-dR-3SJ" firstAttribute="top" secondItem="OBD-zi-EaY" secondAttribute="bottom" constant="8" symbolic="YES" id="zVn-2z-nvq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
