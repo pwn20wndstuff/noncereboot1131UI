@@ -30,6 +30,7 @@ mach_port_t tfp0;
         exit(-1);
     }
     start(tfp0);
+    [_generatorInput setDelegate:self];
 }
 
 
@@ -38,28 +39,6 @@ mach_port_t tfp0;
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)generatorInputActionTriggered:(id)sender {
-    const char *generator = [_generatorInput.text UTF8String];
-    if (!_skipUnlockingNvramSwitch.on) {
-        unlocknvram();
-    }
-    setgen(generator);
-    char *c = getgen();
-    if (!_skipLockingNvramSwitch.on) {
-        locknvram();
-    }
-    if (!strcmp(generator, c)) {
-        UIAlertController *AlertController = [UIAlertController alertControllerWithTitle:@"Success"                                                   message:@"The generator has been set" preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *OK = [UIAlertAction actionWithTitle:@"OK"                                     style:UIAlertActionStyleDefault handler:nil];
-        [AlertController addAction:OK];
-        [self presentViewController:AlertController animated:YES completion:nil];
-    } else {
-        UIAlertController *AlertController = [UIAlertController alertControllerWithTitle:@"Error"                                                   message:@"Failed to validate generator" preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *OK = [UIAlertAction actionWithTitle:@"OK"                                     style:UIAlertActionStyleDefault handler:nil];
-        [AlertController addAction:OK];
-        [self presentViewController:AlertController animated:YES completion:nil];
-    }
-}
 - (IBAction)tappedOnDeleteGenerator:(id)sender {
     if (!_skipUnlockingNvramSwitch.on) {
         unlocknvram();
@@ -135,6 +114,42 @@ NSString *_urlForUsername(NSString *user) {
 }
 - (IBAction)tappedOnIanBeer:(id)sender {
     openUser(@"i41nbeer");
+}
+
+-(BOOL) textFieldShouldReturn:(UITextField *)textField{
+    if (!_skipLockingNvramSwitch.on) {
+        locknvram();
+    }
+    
+    const char *generator = [_generatorInput.text UTF8String];
+    if (!_skipUnlockingNvramSwitch.on) {
+        unlocknvram();
+    }
+    setgen(generator);
+    char *c = getgen();
+    if (!_skipLockingNvramSwitch.on) {
+        locknvram();
+    }
+    double delayInSeconds = 0.1;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+    if (!strcmp(generator, c)) {
+        UIAlertController *AlertController = [UIAlertController alertControllerWithTitle:@"Success"                                                   message:@"The generator has been set" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *OK = [UIAlertAction actionWithTitle:@"OK"                                     style:UIAlertActionStyleDefault handler:nil];
+        [AlertController addAction:OK];
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            [self presentViewController:AlertController animated:YES completion:nil];
+        });
+    } else {
+        UIAlertController *AlertController = [UIAlertController alertControllerWithTitle:@"Error"                                                   message:@"Failed to validate generator" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *OK = [UIAlertAction actionWithTitle:@"OK"                                     style:UIAlertActionStyleDefault handler:nil];
+        [AlertController addAction:OK];
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            [self presentViewController:AlertController animated:YES completion:nil];
+        });
+    }
+    
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end

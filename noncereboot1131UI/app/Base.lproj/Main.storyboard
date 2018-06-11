@@ -23,9 +23,6 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="generatorInputActionTriggered:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="AtE-37-f2V"/>
-                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="noncereboot1131" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBD-zi-EaY">
                                 <rect key="frame" x="31" y="72" width="259" height="42"/>
