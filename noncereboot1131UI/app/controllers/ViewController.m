@@ -49,13 +49,27 @@ mach_port_t tfp0;
         UIAlertAction *OK = [UIAlertAction actionWithTitle:@"OK"                                     style:UIAlertActionStyleDefault handler:nil];
         [AlertController addAction:OK];
         [self presentViewController:AlertController animated:YES completion:nil];
-        _generatorLabel.text = [NSString stringWithUTF8String:c];
     } else {
         UIAlertController *AlertController = [UIAlertController alertControllerWithTitle:@"Error"                                                   message:@"Failed to validate generator" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *OK = [UIAlertAction actionWithTitle:@"OK"                                     style:UIAlertActionStyleDefault handler:nil];
         [AlertController addAction:OK];
         [self presentViewController:AlertController animated:YES completion:nil];
     }
+}
+- (IBAction)tappedOnDeleteGenerator:(id)sender {
+    unlocknvram();
+    if (!delgen()) {
+        UIAlertController *AlertController = [UIAlertController alertControllerWithTitle:@"Success"                                                   message:@"The generator has been deleted" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *OK = [UIAlertAction actionWithTitle:@"OK"                                     style:UIAlertActionStyleDefault handler:nil];
+        [AlertController addAction:OK];
+        [self presentViewController:AlertController animated:YES completion:nil];
+    } else {
+        UIAlertController *AlertController = [UIAlertController alertControllerWithTitle:@"Error"                                                   message:@"Failed to deleted the generator" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *OK = [UIAlertAction actionWithTitle:@"OK"                                     style:UIAlertActionStyleDefault handler:nil];
+        [AlertController addAction:OK];
+        [self presentViewController:AlertController animated:YES completion:nil];
+    }
+    locknvram();
 }
 
 @end

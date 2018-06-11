@@ -28,19 +28,19 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="noncereboot1131" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBD-zi-EaY">
-                                <rect key="frame" x="58.5" y="72" width="259" height="42"/>
+                                <rect key="frame" x="58" y="72" width="259" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="for iOS 11.0 - 11.3.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qK3-dR-3SJ">
-                                <rect key="frame" x="116.5" y="122" width="143" height="21"/>
+                                <rect key="frame" x="116" y="122" width="143" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by Pwn20wnd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyu-zN-jQY">
-                                <rect key="frame" x="133.5" y="151" width="109" height="21"/>
+                                <rect key="frame" x="133" y="151" width="109" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -57,6 +57,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fz3-2H-JAh">
+                                <rect key="frame" x="79" y="370.5" width="217" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="delete the generator"/>
+                                <connections>
+                                    <action selector="tappedOnDeleteGenerator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T46-g4-sca"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -64,7 +72,9 @@
                             <constraint firstItem="qK3-dR-3SJ" firstAttribute="centerX" secondItem="qyu-zN-jQY" secondAttribute="centerX" id="A4t-81-Sgg"/>
                             <constraint firstAttribute="bottom" secondItem="Lsd-1D-wSe" secondAttribute="bottom" constant="20" symbolic="YES" id="AUJ-dC-N3G"/>
                             <constraint firstItem="Lsd-1D-wSe" firstAttribute="leading" secondItem="nKB-dg-PSd" secondAttribute="leading" id="DQJ-bp-ug6"/>
+                            <constraint firstItem="Fz3-2H-JAh" firstAttribute="top" secondItem="nKB-dg-PSd" secondAttribute="bottom" constant="22" id="QcY-Db-uUT"/>
                             <constraint firstItem="IwY-5V-xhN" firstAttribute="leading" secondItem="nKB-dg-PSd" secondAttribute="leading" id="TYA-o7-rIy"/>
+                            <constraint firstItem="Fz3-2H-JAh" firstAttribute="centerX" secondItem="nKB-dg-PSd" secondAttribute="centerX" id="Xyx-NJ-jnH"/>
                             <constraint firstItem="nKB-dg-PSd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Z8G-V0-KKp"/>
                             <constraint firstItem="nKB-dg-PSd" firstAttribute="top" secondItem="IwY-5V-xhN" secondAttribute="bottom" constant="29" id="Zdp-HF-gEa"/>
                             <constraint firstItem="Lsd-1D-wSe" firstAttribute="trailing" secondItem="nKB-dg-PSd" secondAttribute="trailing" id="bLg-Yk-Ygx"/>
@@ -92,7 +102,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
             </objects>
-            <point key="canvasLocation" x="135" y="133.09859154929578"/>
+            <point key="canvasLocation" x="133.59999999999999" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>
