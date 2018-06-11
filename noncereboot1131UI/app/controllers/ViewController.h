@@ -12,6 +12,8 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *generatorInput;
 @property (weak, nonatomic) IBOutlet UILabel *generatorLabel;
+@property (weak, nonatomic) IBOutlet UISwitch *skipUnlockingNvramSwitch;
+@property (weak, nonatomic) IBOutlet UISwitch *skipLockingNvramSwitch;
 
 @end
 

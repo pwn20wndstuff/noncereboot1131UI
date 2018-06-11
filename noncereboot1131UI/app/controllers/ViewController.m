@@ -40,10 +40,14 @@ mach_port_t tfp0;
 
 - (IBAction)generatorInputActionTriggered:(id)sender {
     const char *generator = [_generatorInput.text UTF8String];
-    unlocknvram();
+    if (!_skipUnlockingNvramSwitch.on) {
+        unlocknvram();
+    }
     setgen(generator);
     char *c = getgen();
-    locknvram();
+    if (!_skipLockingNvramSwitch.on) {
+        locknvram();
+    }
     if (!strcmp(generator, c)) {
         UIAlertController *AlertController = [UIAlertController alertControllerWithTitle:@"Success"                                                   message:@"The generator has been set" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *OK = [UIAlertAction actionWithTitle:@"OK"                                     style:UIAlertActionStyleDefault handler:nil];
@@ -57,7 +61,9 @@ mach_port_t tfp0;
     }
 }
 - (IBAction)tappedOnDeleteGenerator:(id)sender {
-    unlocknvram();
+    if (!_skipUnlockingNvramSwitch.on) {
+        unlocknvram();
+    }
     if (!delgen()) {
         UIAlertController *AlertController = [UIAlertController alertControllerWithTitle:@"Success"                                                   message:@"The generator has been deleted" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *OK = [UIAlertAction actionWithTitle:@"OK"                                     style:UIAlertActionStyleDefault handler:nil];
@@ -69,7 +75,9 @@ mach_port_t tfp0;
         [AlertController addAction:OK];
         [self presentViewController:AlertController animated:YES completion:nil];
     }
-    locknvram();
+    if (!_skipLockingNvramSwitch.on) {
+        locknvram();
+    }
 }
 
 @end

@@ -34,13 +34,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="for iOS 11.0 - 11.3.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qK3-dR-3SJ">
-                                <rect key="frame" x="116" y="122" width="143" height="21"/>
+                                <rect key="frame" x="116.5" y="122" width="142.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by Pwn20wnd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyu-zN-jQY">
-                                <rect key="frame" x="133" y="151" width="109" height="21"/>
+                                <rect key="frame" x="133.5" y="150.5" width="108.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -52,7 +52,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="e.g. 0xfeedfacecafebeef" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IwY-5V-xhN">
-                                <rect key="frame" x="16" y="268.5" width="343" height="21"/>
+                                <rect key="frame" x="16" y="269" width="343" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -65,13 +65,44 @@
                                     <action selector="tappedOnDeleteGenerator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T46-g4-sca"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AKJ-Gj-CSU">
+                                <rect key="frame" x="76" y="432" width="222.5" height="31"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OrX-I8-94W">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skip unlocking nvram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09g-Mp-W7M">
+                                        <rect key="frame" x="59" y="0.0" width="163.5" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tho-qC-0rb">
+                                <rect key="frame" x="86" y="471" width="203.5" height="31"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UHX-H1-tjz">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skip locking nvram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HpA-He-lbH">
+                                        <rect key="frame" x="59" y="0.0" width="144.5" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="tho-qC-0rb" firstAttribute="top" secondItem="AKJ-Gj-CSU" secondAttribute="bottom" constant="8" symbolic="YES" id="3Vu-0R-gFf"/>
+                            <constraint firstItem="AKJ-Gj-CSU" firstAttribute="centerX" secondItem="Fz3-2H-JAh" secondAttribute="centerX" constant="-0.25" id="7Sk-9B-ZXc"/>
                             <constraint firstItem="qyu-zN-jQY" firstAttribute="centerX" secondItem="IwY-5V-xhN" secondAttribute="centerX" id="9Vn-hO-MAS"/>
                             <constraint firstItem="qK3-dR-3SJ" firstAttribute="centerX" secondItem="qyu-zN-jQY" secondAttribute="centerX" id="A4t-81-Sgg"/>
                             <constraint firstAttribute="bottom" secondItem="Lsd-1D-wSe" secondAttribute="bottom" constant="20" symbolic="YES" id="AUJ-dC-N3G"/>
                             <constraint firstItem="Lsd-1D-wSe" firstAttribute="leading" secondItem="nKB-dg-PSd" secondAttribute="leading" id="DQJ-bp-ug6"/>
+                            <constraint firstItem="AKJ-Gj-CSU" firstAttribute="centerX" secondItem="tho-qC-0rb" secondAttribute="centerX" constant="-0.5" id="EKf-Yi-WVJ"/>
                             <constraint firstItem="Fz3-2H-JAh" firstAttribute="top" secondItem="nKB-dg-PSd" secondAttribute="bottom" constant="22" id="QcY-Db-uUT"/>
                             <constraint firstItem="IwY-5V-xhN" firstAttribute="leading" secondItem="nKB-dg-PSd" secondAttribute="leading" id="TYA-o7-rIy"/>
                             <constraint firstItem="Fz3-2H-JAh" firstAttribute="centerX" secondItem="nKB-dg-PSd" secondAttribute="centerX" id="Xyx-NJ-jnH"/>
@@ -84,6 +115,7 @@
                             <constraint firstItem="nKB-dg-PSd" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="mli-Hr-mUv"/>
                             <constraint firstItem="OBD-zi-EaY" firstAttribute="centerX" secondItem="qK3-dR-3SJ" secondAttribute="centerX" id="skJ-G5-QM8"/>
                             <constraint firstItem="qyu-zN-jQY" firstAttribute="top" secondItem="qK3-dR-3SJ" secondAttribute="bottom" constant="8" symbolic="YES" id="wld-wr-D1L"/>
+                            <constraint firstItem="AKJ-Gj-CSU" firstAttribute="top" secondItem="Fz3-2H-JAh" secondAttribute="bottom" constant="19.5" id="xNU-sz-BZP"/>
                             <constraint firstItem="qK3-dR-3SJ" firstAttribute="top" secondItem="OBD-zi-EaY" secondAttribute="bottom" constant="8" symbolic="YES" id="zVn-2z-nvq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -91,6 +123,8 @@
                     <connections>
                         <outlet property="generatorInput" destination="nKB-dg-PSd" id="Ucp-ND-kjC"/>
                         <outlet property="generatorLabel" destination="IwY-5V-xhN" id="SZy-ap-k2e"/>
+                        <outlet property="skipLockingNvramSwitch" destination="UHX-H1-tjz" id="dG5-pY-02Y"/>
+                        <outlet property="skipUnlockingNvramSwitch" destination="OrX-I8-94W" id="AZn-YV-Fje"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
