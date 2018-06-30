@@ -50,5 +50,7 @@
 		<string>tweetings</string>
 		<string>twitter</string>
 	</array>
+	<key>UIFileSharingEnabled</key>
+	<true/>
 </dict>
 </plist>
